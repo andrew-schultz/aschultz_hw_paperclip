@@ -1,0 +1,7 @@
+<h1>Welcome <%= @user.username %></h1>
+<% @users.each do |u| %>
+	<h2><%= u.username %></h2>
+	<%= image_tag u.avatar.url(:medium) %>
+
+	<p><%= u.bio %></p>
+<% end %>
