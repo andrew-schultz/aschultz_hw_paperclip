@@ -1,15 +1,24 @@
 <div id="page">
-	<h1>Edit</h1>
-	<%=form_for @user, :url => user_path, :html => { :multipart => true } do |f| %>
-		<%=f.label :username %>
-		<%=f.text_field :username %>
-		<%=f.label :password %>
-		<%=f.password_field :password %>
-		<%=f.label :password_confirmation %>
-		<%=f.password_field :password_confirmation %>
-		<%=f.label :bio %>
-		<%=f.text_area :bio %>
-		<%=f.file_field :avatar %>
-		<%=f.submit "Submit" %>
-	<%end%>
+	<div id="edit">
+		<h1>Edit</h1>
+		<%=form_for @user, :url => user_path, :html => { :multipart => true } do |f| %>
+			<%=f.label :username %>
+			<%=f.text_field :username %>
+			<br>
+			<br>
+			<%=f.label :password %>
+			<%=f.password_field :password %>
+			<br>
+			<br>
+			<%=f.label :bio %>
+			<%=f.text_area :bio %>
+			<br>
+			<br>
+			<%=f.label :avatar %>
+			<%=f.file_field :avatar %>
+			<br>
+			<br>
+			<%=f.submit "Submit" %>
+		<%end%>
+	</div>
 </div>
